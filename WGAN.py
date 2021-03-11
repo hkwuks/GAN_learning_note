@@ -130,7 +130,7 @@ def gradient_penalty(D,xr,xf):
     xf=xf.detach()
     xr=xr.detach()
 
-    alpha=torch.randn(batch_size,1).cuda()
+    alpha=torch.rand(batch_size,1).cuda()
     alpha=alpha.expand_as(xr)
 
     interpolates=alpha*xr+(1-alpha)*xf
@@ -139,7 +139,7 @@ def gradient_penalty(D,xr,xf):
     disc_interpolates=D(interpolates)
 
     gradients=autograd.grad(outputs=disc_interpolates,inputs=interpolates,
-                            grad_outputs=torch.ones_like((disc_interpolates)),
+                            grad_outputs=torch.ones_like(disc_interpolates),
                             create_graph=True,retain_graph=True,only_inputs=True)[0]
 
     gp=((gradients.norm(2,dim=1)-1)**2).mean()*LAMBDA # torch.norm():求张量的范数
