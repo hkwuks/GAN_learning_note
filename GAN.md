@@ -1,0 +1,29 @@
+# GAN学习笔记
+
+## 一、基本思路
+
+![image-20210309212740360](GAN.assets/image-20210309212740360.png)
+
+## 二、讲解
+
+![image-20210310130414983](GAN.assets/image-20210310130414983.png)
+
+![image-20210310172317599](GAN.assets/image-20210310172317599.png)
+
+![image-20210310173311918](GAN.assets/image-20210310173311918.png)
+
+![image-20210310173424707](GAN.assets/image-20210310173424707.png)
+
+![image-20210310173548204](GAN.assets/image-20210310173548204.png)
+
+![image-20210310173942499](GAN.assets/image-20210310173942499.png)
+
+![image-20210310175920831](GAN.assets/image-20210310175920831.png)
+
+![image-20210310180421435](GAN.assets/image-20210310180421435.png)
+
+## 三、WGAN
+
+由于GAN训练时，可能会出现长时间梯度不下降的问题。WGAN改进了这个问题。
+
+![image-20210311173314776](GAN.assets/image-20210311173314776.png)
